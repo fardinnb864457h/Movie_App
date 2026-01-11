@@ -1,101 +1,217 @@
-
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8"></meta>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-<title>FR_S_F_3388 App Download</title>
-<link href="https://i.imgur.com/lDSPxYn.png" rel="icon" type="image/png"></link>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"></link>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet"></link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FR SUPER FLASH 3388</title>
+
+<link rel="icon" href="https://i.imgur.com/lDSPxYn.png">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-    body { margin:0; font-family:'Inter',sans-serif; background:#0d0d15; color:#f5f5f5; }
-    header { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.6); backdrop-filter:blur(10px); padding:15px 0; z-index:100; }
-    nav { max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px; }
-    .logo { font-size:1.8rem; font-weight:800; color:#fff; text-decoration:none; }
-    .logo span { color:#ffaa00; }
-    .nav-links { display:flex; gap:25px; }
-    .nav-links a { color:#bbb; text-decoration:none; letter-spacing:0.5px; font-weight:600; }
-    .nav-links a:hover { color:#ffaa00; }
-    .menu-toggle { display:none; font-size:1.8rem; cursor:pointer; }
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(180deg,#0b0b14,#111827);
+  color:#e5e7eb;
+}
 
-    /* Hero */
-    .hero { display:flex; flex-direction:column; justify-content:center; align-items:center; padding-top:120px; padding-bottom:80px; text-align:center; position:relative; }
-    .hero-content { position:relative; z-index:10; max-width:700px; }
-    .hero-logo { width:200px; margin-bottom:20px; }
-    .hero h1 { font-size:2.8rem; font-weight:800; margin-bottom:15px; }
-    .hero p { font-size:1.1rem; color:#000; margin-bottom:25px; line-height:1.6; } /* Version 1.6 কালো রং */
-    .btn { background:#ffaa00; color:#000; padding:12px 25px; border-radius:8px; font-weight:700; text-decoration:none; display:inline-block; transition:.3s; }
-    .btn:hover { background:#ffbb33; }
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.55);
+  z-index:1000;
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:1.7rem;
+  font-weight:800;
+  color:#fff;
+  text-decoration:none;
+}
+.logo span{color:#fbbf24}
 
-    /* Images below hero section */
-    .hero-images { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin:40px 0 0 0; }
-    .hero-images img { width:100px; border-radius:10px; border:2px solid #ffaa00; }
+/* HERO */
+.hero{
+  padding:140px 20px 80px;
+  text-align:center;
+}
+.hero-logo{
+  width:190px;
+  border-radius:26px;
+  box-shadow:0 20px 60px rgba(251,191,36,.35);
+}
+.hero h1{
+  font-size:2.6rem;
+  margin:25px 0 10px;
+  font-weight:800;
+}
+.hero p{
+  color:#9ca3af;
+  font-size:1.05rem;
+}
 
-    /* Features */
-    .features { padding:80px 20px; max-width:1200px; margin:auto; }
-    .section-title { font-size:2.2rem; text-align:center; margin-bottom:50px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
-    .card { background:#1a1a22; padding:25px; border-radius:15px; border:1px solid #222; text-align:center; transition:.3s; }
-    .card:hover { transform:translateY(-6px); border-color:#ffaa00; }
-    .card i { font-size:2.4rem; color:#ffaa00; margin-bottom:15px; }
+/* APP INFO */
+.app-info{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin:25px 0;
+  flex-wrap:wrap;
+}
+.info-box{
+  background:#020617;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:.95rem;
+  border:1px solid #1f2933;
+}
 
-    /* Footer */
-    footer { background:#000; padding:40px 20px; margin-top:50px; }
-    .footer-text { text-align:center; color:#777; font-size:0.9rem; }
+/* BUTTON */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:25px;
+  padding:15px 38px;
+  border-radius:50px;
+  background:linear-gradient(135deg,#fbbf24,#f59e0b);
+  color:#000;
+  font-weight:800;
+  font-size:1.05rem;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn:hover{transform:scale(1.05)}
 
-    @media(max-width:768px){
-        .nav-links { display:none; }
-        .menu-toggle { display:block; color:#fff; }
-    }
+/* SCREENSHOTS */
+.screens{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+}
+.screens img{
+  height:220px;
+  border-radius:18px;
+  border:2px solid #fbbf24;
+}
+
+/* FEATURES */
+.features{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+.section-title{
+  text-align:center;
+  font-size:2.2rem;
+  margin-bottom:50px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:#020617;
+  border:1px solid #1f2933;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  border-color:#fbbf24;
+}
+.card i{
+  font-size:2.6rem;
+  color:#fbbf24;
+  margin-bottom:15px;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:35px 20px;
+  color:#6b7280;
+  font-size:.9rem;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1{font-size:2rem}
+  .hero-logo{width:150px}
+}
 </style>
 </head>
-<body>
-<header>
-    <nav>
-        <a class="logo" href="#">FR<span>_S_F_3388</span></a>
-        <div class="nav-links">
 
-        <i class="fas fa-bars menu-toggle" id="menuBtn"></i>
-    </div></nav>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="#">FR<span>_S_F_3388</span></a>
+  </nav>
 </header>
 
 <section class="hero">
-    <img alt="Logo" class="hero-logo" src="https://i.imgur.com/lDSPxYn.png" />
-    <div class="hero-content">
-        <h1>Download FR_S_F_3388 App</h1>
-        <p>Version 2.1</p>
-        <a class="btn" href="https://fardinnb864457h.github.io/App-Download/FR_S_F_3388.apk">Download APK</a>
-    </div>
-</section>
-  
+  <img class="hero-logo" src="https://i.imgur.com/lDSPxYn.png">
+  <h1>FR_S_F_3388</h1>
+  <p>Fast • Smooth • Entertainment App</p>
 
-<!-- Images outside hero background -->
-<div class="hero-images">
-    <img alt="Image 1" src="https://i.imgur.com/fiaD9be.jpeg" />
-    <img alt="Image 2" src="https://i.imgur.com/gGE1Acf.jpeg" />
-    <img alt="Image 3" src="https://i.imgur.com/VnxfTwd.jpeg" />
-    <img alt="Image 4" src="https://i.imgur.com/afPASQ4.jpeg" />
-    <img alt="Image 5" src="https://i.imgur.com/Z4q7GBL.jpeg" />
+  <div class="app-info">
+    <div class="info-box">📦 Size: 15MB</div>
+    <div class="info-box">⚙ Version: 2.1</div>
+  </div>
+
+  <a class="btn" href="https://fardinnb864457h.github.io/App-Download/FR_S_F_3388.apk">
+    <i class="fas fa-download"></i> Download APK
+  </a>
+</section>
+
+<div class="screens">
+  <img src="https://i.imgur.com/fiaD9be.jpeg">
+  <img src="https://i.imgur.com/gGE1Acf.jpeg">
+  <img src="https://i.imgur.com/VnxfTwd.jpeg">
+  <img src="https://i.imgur.com/afPASQ4.jpeg">
+  <img src="https://i.imgur.com/Z4q7GBL.jpeg">
 </div>
 
-<section class="features" id="features">
-    <h2 class="section-title">Enjoy Anime Movie Cartoon Movie And Anime Show</h2>
-    <div class="grid">
-        <div class="card">
-            <i class="fas fa-film"></i>
-            <h3>Movies</h3>
-            <p>Anime Movie Cartoon Movies & Marvel Movies</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-tv"></i>
-            <h3>Anime Show</h3>
-            <p>Anime Show</p>
-        </div>
+<section class="features">
+  <h2 class="section-title">Unlimited Entertainment</h2>
+  <div class="grid">
+    <div class="card">
+      <i class="fas fa-film"></i>
+      <h3>Movies</h3>
+      <p>Anime, Cartoon, Marvel & Action Movies</p>
     </div>
+    <div class="card">
+      <i class="fas fa-tv"></i>
+      <h3>Anime Shows</h3>
+      <p>All Popular Anime Series in HD</p>
+    </div>
+  </div>
 </section>
 
-<footer id="footer">
-    <p class="footer-text">© FR SUPER FLASH 3388</p>
+<footer>
+  © FR SUPER FLASH 3388 • All Rights Reserved
 </footer>
+
 </body>
 </html>
